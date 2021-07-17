@@ -1672,50 +1672,50 @@ input, select, textarea {
 		  
 /* skill bar css script */
 
-		  .skills{
-			width: 150%;
-			max-width: 600px;
-			padding: 0 20px;
-		  }
-		  
-		  .skill-name{
-			font-size: 15px;
-			font-weight: 700;
-			text-transform: uppercase;
-			margin: 25px 0;
-		  }
-		  
-		  .skill-bar{
-			height: 5px;
-			background: #cacaca;
-			border-radius: 10px;
-		  }
-		  
-		  .skill-per{
-			height: 5px;
-			background: linear-gradient(to right, #35a22c 0%, #0ea8cf 100%);
-			background-image: linear-gradient(to right, rgb(53, 162, 44) 0%, rgb(14, 168, 207) 100%);
-			border-radius: 10px;
-			width: 0;
-			transition: 5s linear;
-			position: relative;
-		  }
-		  
-		  .skill-per::before{
-			content: attr(per);
-			position: absolute;
-			padding: 4px 6px;
-			background: linear-gradient(to right, #35a22c 0%, #0ea8cf 100%);
-			background-image: linear-gradient(to right, rgb(53, 162, 44) 0%, rgb(14, 168, 207) 100%);
-			/* background-color: #000;
-			color: #ffe81f; */
-			font-size: 13px;
-			border-radius: 6px;
-			top: -35px;
-			right: 0;
-			transform: translateX(20%);
-		  }
-		  
+  
+  .skills{
+	width: 100%;
+	max-width: auto;
+	padding: 0 20px;
+  }
+  
+  .skill-name{
+	font-size: 15px;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin: 20px 0;
+  }
+  
+  .skill-bar{
+	height: 10px;
+	background: #cacaca;
+	border-radius: 8px;
+  }
+  
+  .skill-per{
+	height: 10px;
+	background: linear-gradient(to right, #35a22c 0%, #0ea8cf 100%);
+	background-image: linear-gradient(to right, rgb(53, 162, 44) 0%, rgb(14, 168, 207) 100%);
+	border-radius: 8px;
+	width: 0;
+	transition: 1s linear;
+	position: relative;
+  }
+  
+  .skill-per::before{
+	content: attr(per);
+	position: absolute;
+	padding: 4px 6px;
+	background: linear-gradient(to right, #35a22c 0%, #0ea8cf 100%);
+	background-image: linear-gradient(to right, rgb(53, 162, 44) 0%, rgb(14, 168, 207) 100%);
+	font-size: 12px;
+	border-radius: 4px;
+	top: -35px;
+	right: 0;
+	transform: translateX(50%);
+  }
+  
+ 	  
 .iframe-container{
 	position: relative;
 	width: 100%;

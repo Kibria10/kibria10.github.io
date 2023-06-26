@@ -1,28 +1,24 @@
-/**
- * Particleground demo
- * @author Jonathan Nicol - @mrjnicol
- */
-
-// This can be used to set the Particles Effects. Check README for more details!
 document.addEventListener('DOMContentLoaded', function () {
   particleground(document.getElementById('particles'), {
-    dotColor: '#08c2c2',
-    lineColor: '#ffe81f'
+    dotColor: makeDynamicColors(),
+    lineColor: makeDynamicColors(),
   });
+
+  function makeDynamicColors() {
+    var colors = [
+      '#660099',
+      '#cccccc',
+      '#ffff00',
+      '#ff99cc',
+      '#66ccff',
+      '#ccffff',
+      '#ffffff',
+      '#993333'];
+    return colors[Math.floor(Math.random() * colors.length)];
+  }
+
   var intro = document.getElementById('intro');
   intro.style.marginTop = - intro.offsetHeight / 2 + 'px';
 }, false);
 
 
-/*
-// jQuery plugin example:
-$(document).ready(function() {
-  $('#particles').particleground({
-    dotColor: '#5cbdaa',
-    lineColor: '#5cbdaa'
-  });
-  $('.intro').css({
-    'margin-top': -($('.intro').height() / 2)
-  });
-});
-*/

@@ -1,7 +1,18 @@
 document.addEventListener('DOMContentLoaded', function () {
-  particleground(document.getElementById('particles'), {
+var pg =  particleground(document.getElementById('particles'), {
     dotColor: makeDynamicColors(),
     lineColor: makeDynamicColors(),
+  });
+
+  document.addEventListener('click', function(event) {
+    if (event.target.tagName === 'A') {
+      pg.pause();
+      pg.destroy();
+      pg = particleground(document.getElementById('particles'), {
+        dotColor: makeDynamicColors(),
+        lineColor: makeDynamicColors(),
+      });
+    }
   });
 
   function makeDynamicColors() {
